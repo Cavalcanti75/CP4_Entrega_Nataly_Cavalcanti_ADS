@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de contato do site pessoal de Nataly Barros Cavalcanti.">
+    <title>Nataly Cavalcanti | Contato</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <div class="topo-conteudo">
+            <a class="marca" href="index.html">Nataly Cavalcanti</a>
+
+            <nav class="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Apresentação</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="formulario.html" class="ativo" aria-current="page">Contato</a></li>
+                    <li><a href="multimidia.html">Multimídia</a></li>
+                    <li><a href="graficos.html">Gráficos</a></li>
+                </ul>
+            </nav>
+            <button class="botao-tema" type="button" id="tema-toggle"
+                    aria-label="Ativar tema escuro" aria-pressed="false">
+                Tema escuro
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="titulo-pagina">
+            <h1>Contato</h1>
+            <p>Envie uma mensagem para mim</p>
+        </section>
+
+        <section>
+            <h2>Fale comigo</h2>
+            <p>
+                Preencha o formulário abaixo para falar sobre trabalho, projetos ou
+                orçamento de camisetas personalizadas.
+            </p>
+
+            <form action="#" method="post">
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" required minlength="3"
+                           placeholder="Digite seu nome">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="voce@exemplo.com">
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required
+                           pattern="[0-9() +-]{8,20}" placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="campo">
+                    <label for="site">Site ou rede social (opcional)</label>
+                    <input type="url" id="site" name="site" placeholder="https://">
+                </div>
+
+                <div class="campo">
+                    <label for="data">Data desejada para retorno</label>
+                    <input type="date" id="data" name="data">
+                </div>
+
+                <div class="campo">
+                    <label for="quantidade">Quantidade de peças (se for orçamento)</label>
+                    <input type="number" id="quantidade" name="quantidade" min="1" max="1000" step="1">
+                </div>
+
+                <div class="campo">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="trabalho">Oportunidade de trabalho</option>
+                        <option value="projeto">Projeto de site</option>
+                        <option value="camisetas">Orçamento de camisetas</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Preferência de contato</legend>
+                    <label class="opcao">
+                        <input type="radio" name="preferencia" value="email" required>
+                        E-mail
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="preferencia" value="telefone">
+                        Telefone
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="preferencia" value="whatsapp">
+                        WhatsApp
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesses</legend>
+                    <label class="opcao">
+                        <input type="checkbox" name="interesse" value="design">
+                        Design gráfico
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" name="interesse" value="web">
+                        Desenvolvimento web
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" name="interesse" value="camisetas">
+                        Camisetas personalizadas
+                    </label>
+                </fieldset>
+
+                <div class="campo">
+                    <label for="arquivo">Anexar arte ou referência (opcional)</label>
+                    <input type="file" id="arquivo" name="arquivo" accept="image/*,.pdf">
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required minlength="10"
+                              placeholder="Conte o que você precisa"></textarea>
+                </div>
+
+                <div class="acoes">
+                    <button class="botao" type="submit">Enviar mensagem</button>
+                    <button class="botao secundario" type="reset">Limpar campos</button>
+                </div>
+            </form>
+            <p id="feedback-formulario" class="feedback-formulario"
+               role="status" aria-live="polite" hidden></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nataly Barros Cavalcanti</p>
+        <p>Projeto Individual — Desenvolvimento Web</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página com vídeo, áudio e conteúdo incorporado do site pessoal de Nataly Cavalcanti.">
+    <title>Nataly Cavalcanti | Multimídia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <div class="topo-conteudo">
+            <a class="marca" href="index.html">Nataly Cavalcanti</a>
+
+            <nav class="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Apresentação</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="formulario.html">Contato</a></li>
+                    <li><a href="multimidia.html" class="ativo" aria-current="page">Multimídia</a></li>
+                    <li><a href="graficos.html">Gráficos</a></li>
+                </ul>
+            </nav>
+            <button class="botao-tema" type="button" id="tema-toggle"
+                    aria-label="Ativar tema escuro" aria-pressed="false">
+                Tema escuro
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="titulo-pagina">
+            <h1>Multimídia</h1>
+            <p>Vídeo, áudio e conteúdo incorporado</p>
+        </section>
+
+        <section>
+            <h2>Vídeo</h2>
+            <div class="caixa-midia">
+                <video controls preload="metadata">
+                    <source src="video/italya-paisagem.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <p>
+                    Vídeo de abertura do projeto. No CP4 este espaço receberá a
+                    apresentação final de dois minutos.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Áudio</h2>
+            <div class="caixa-midia">
+                <audio controls>
+                    <source src="audio/musica-classica.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                <p>Faixa curta usada como trilha de teste da página.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Conteúdo incorporado</h2>
+            <p>Aula em vídeo que uso como referência de estudo de HTML e CSS.</p>
+            <iframe
+                width="560" height="315" src="https://www.youtube.com/embed/wx5Be8G8Zbo?si=rGEd2yMyvukg72nQ" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nataly Barros Cavalcanti</p>
+        <p>Projeto Individual — Desenvolvimento Web</p>
+    </footer>
+</body>
+</html>

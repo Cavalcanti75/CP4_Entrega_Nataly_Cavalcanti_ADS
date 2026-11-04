@@ -1,0 +1,512 @@
+/* ==========================================================================
+   Site pessoal — Nataly Barros Cavalcanti
+   CP1: estrutura HTML semântica e CSS básico
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f7f5f2;
+}
+
+/* --------------------------------------------------------------------------
+   Cabeçalho: marca à esquerda e menu no canto superior direito
+   -------------------------------------------------------------------------- */
+
+.topo {
+    background: #7e07a5;
+    color: #fff;
+    padding: 0.9rem 5%;
+}
+
+.topo-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.marca {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.marca:hover,
+.marca:focus {
+    text-decoration: underline;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.45rem 0.85rem;
+    border-radius: 5px;
+}
+
+.menu a:hover,
+.menu a:focus {
+    background: #9b2fc2;
+}
+
+.menu a.ativo {
+    background: #bd75d5;
+}
+
+/* --------------------------------------------------------------------------
+   Estrutura interna
+   -------------------------------------------------------------------------- */
+
+main {
+    width: min(1100px, 90%);
+    margin: 2rem auto;
+}
+
+section,
+article {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.titulo-pagina {
+    border-left: 6px solid #7e07a5;
+}
+
+.titulo-pagina h1 {
+    margin: 0;
+    color: #4a0361;
+}
+
+.titulo-pagina p {
+    margin: 0.25rem 0 0;
+    color: #555;
+}
+
+h2,
+h3 {
+    color: #1f2933;
+}
+
+.destaque {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.destaque img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    background: #f1e6f7;
+}
+
+.destaque div {
+    flex: 1 1 320px;
+}
+
+.destaque h2 {
+    margin-top: 0;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.botao {
+    display: inline-block;
+    background: #7e07a5;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.65rem 1.1rem;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.botao:hover,
+.botao:focus {
+    background: #bd75d5;
+}
+
+.botao.secundario {
+    background: #6b7280;
+}
+
+.botao.secundario:hover,
+.botao.secundario:focus {
+    background: #9ca3af;
+}
+
+/* --------------------------------------------------------------------------
+   Formulário
+   -------------------------------------------------------------------------- */
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid #7e07a5;
+    outline-offset: 1px;
+}
+
+fieldset {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.4rem;
+}
+
+.opcao {
+    display: block;
+    font-weight: normal;
+    margin: 0.35rem 0;
+}
+
+.opcao input {
+    margin-right: 0.4rem;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Multimídia e gráficos
+   -------------------------------------------------------------------------- */
+
+.caixa-midia {
+    display: grid;
+    gap: 1rem;
+}
+
+.caixa-midia video,
+.caixa-midia audio,
+iframe {
+    width: 100%;
+}
+
+iframe {
+    min-height: 315px;
+    border: 0;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.caixa-svg {
+    overflow-x: auto;
+}
+
+.caixa-svg svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Rodapé
+   -------------------------------------------------------------------------- */
+
+footer {
+    background: #4a0361;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   Ajuste simples para telas pequenas
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+    .topo-conteudo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu ul {
+        justify-content: center;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .destaque {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* ==========================================================================
+   CP3 — JavaScript, persistência de tema e ajustes de responsividade
+   ========================================================================== */
+
+/* O tema claro permanece como padrão. */
+.botao-tema {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 5px;
+    background: #fff;
+    color: #4a0361;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-tema:hover,
+.botao-tema:focus-visible {
+    background: #f1e6f7;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.menu a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.feedback-formulario {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 5px solid #16834a;
+    border-radius: 5px;
+    background: #e7f6ed;
+    color: #14532d;
+    font-weight: bold;
+}
+
+.feedback-formulario[hidden] {
+    display: none;
+}
+
+/* Tema escuro aplicado pelo JavaScript. */
+body[data-tema="escuro"] {
+    color: #f3f4f6;
+    background: #111827;
+}
+
+body[data-tema="escuro"] section,
+body[data-tema="escuro"] article {
+    color: #e5e7eb;
+    background: #1f2937;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+}
+
+body[data-tema="escuro"] h2,
+body[data-tema="escuro"] h3,
+body[data-tema="escuro"] .titulo-pagina h1 {
+    color: #d8b4fe;
+}
+
+body[data-tema="escuro"] .titulo-pagina p {
+    color: #d1d5db;
+}
+
+body[data-tema="escuro"] .campo input,
+body[data-tema="escuro"] .campo select,
+body[data-tema="escuro"] .campo textarea {
+    color: #f9fafb;
+    background: #111827;
+    border-color: #6b7280;
+}
+
+body[data-tema="escuro"] fieldset {
+    border-color: #6b7280;
+}
+
+body[data-tema="escuro"] canvas {
+    background: #f9fafb;
+}
+
+body[data-tema="escuro"] .feedback-formulario {
+    color: #bbf7d0;
+    background: #123b2b;
+    border-left-color: #22c55e;
+}
+
+body[data-tema="escuro"] footer {
+    background: #0b1220;
+}
+
+body[data-tema="escuro"] .botao-tema {
+    color: #f9fafb;
+    background: #374151;
+    border-color: #9ca3af;
+}
+
+body[data-tema="escuro"] .botao-tema:hover,
+body[data-tema="escuro"] .botao-tema:focus-visible {
+    background: #4b5563;
+}
+
+/* Ajustes mobile-first: uma coluna como base e duas em telas maiores. */
+.grade {
+    grid-template-columns: 1fr;
+}
+
+.destaque img,
+.caixa-midia video,
+.caixa-midia audio,
+iframe,
+.caixa-svg svg {
+    max-width: 100%;
+}
+
+.caixa-midia video {
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .topo-conteudo {
+        justify-content: space-between;
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .destaque {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .topo-conteudo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .marca {
+        text-align: center;
+    }
+
+    .menu ul {
+        justify-content: center;
+    }
+
+    .botao-tema {
+        align-self: center;
+    }
+
+    main {
+        width: min(100% - 2rem, 1100px);
+    }
+
+    section,
+    article {
+        padding: 1rem;
+    }
+
+    .acoes .botao {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    iframe {
+        min-height: 220px;
+    }
+
+    canvas {
+        height: auto;
+        min-height: 220px;
+    }
+}
+
+
+/* Feedback de envio do formulário — CP3 */
+.feedback-formulario.sucesso {
+    color: #14532d;
+    background-color: #dcfce7;
+    border-left: 5px solid #16a34a;
+}
+
+body[data-tema="escuro"] .feedback-formulario.sucesso {
+    color: #dcfce7;
+    background-color: #14532d;
+    border-left-color: #4ade80;
+}

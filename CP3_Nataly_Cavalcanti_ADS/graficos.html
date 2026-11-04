@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gráficos em Canvas e SVG do site pessoal de Nataly Cavalcanti.">
+    <title>Nataly Cavalcanti | Gráficos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="topo">
+        <div class="topo-conteudo">
+            <a class="marca" href="index.html">Nataly Cavalcanti</a>
+
+            <nav class="menu" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Apresentação</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="formulario.html">Contato</a></li>
+                    <li><a href="multimidia.html">Multimídia</a></li>
+                    <li><a href="graficos.html" class="ativo" aria-current="page">Gráficos</a></li>
+                </ul>
+            </nav>
+            <button class="botao-tema" type="button" id="tema-toggle"
+                    aria-label="Ativar tema escuro" aria-pressed="false">
+                Tema escuro
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="titulo-pagina">
+            <h1>Gráficos</h1>
+            <p>Canvas e SVG</p>
+        </section>
+
+        <section>
+            <h2>Gráfico em Canvas</h2>
+            <p>Nível atual de domínio das tecnologias que estou estudando.</p>
+            <canvas id="graficoCanvas" width="800" height="350">
+                Gráfico de barras com o nível de domínio em HTML, CSS, SVG e Canvas.
+            </canvas>
+        </section>
+
+        <section>
+            <h2>Gráfico em SVG</h2>
+            <p>Distribuição do meu tempo de estudo por área durante a semana.</p>
+            <div class="caixa-svg">
+                <svg width="800" height="350" viewBox="0 0 800 350"
+                     role="img" aria-labelledby="tituloSvg descricaoSvg">
+                    <title id="tituloSvg">Horas de estudo por área</title>
+                    <desc id="descricaoSvg">
+                        Gráfico de barras com as horas semanais dedicadas a HTML, CSS,
+                        JavaScript e design.
+                    </desc>
+
+                    <line x1="70" y1="300" x2="760" y2="300" stroke="#3f3f46" stroke-width="2"></line>
+                    <line x1="70" y1="40" x2="70" y2="300" stroke="#3f3f46" stroke-width="2"></line>
+
+                    <rect x="130" y="120" width="90" height="180" fill="#7e07a5"></rect>
+                    <rect x="290" y="80" width="90" height="220" fill="#9b2fc2"></rect>
+                    <rect x="450" y="150" width="90" height="150" fill="#bd75d5"></rect>
+                    <rect x="610" y="100" width="90" height="200" fill="#6b21a8"></rect>
+
+                    <text x="140" y="325" font-size="16">HTML</text>
+                    <text x="305" y="325" font-size="16">CSS</text>
+                    <text x="443" y="325" font-size="16">JavaScript</text>
+                    <text x="625" y="325" font-size="16">Design</text>
+
+                    <text x="158" y="110" font-size="14">6h</text>
+                    <text x="318" y="70" font-size="14">8h</text>
+                    <text x="478" y="140" font-size="14">5h</text>
+                    <text x="638" y="90" font-size="14">7h</text>
+                </svg>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nataly Barros Cavalcanti</p>
+        <p>Projeto Individual — Desenvolvimento Web</p>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById("graficoCanvas");
+        const contexto = canvas.getContext("2d");
+
+        const dados = [
+            { nome: "HTML", valor: 80 },
+            { nome: "CSS", valor: 70 },
+            { nome: "SVG", valor: 55 },
+            { nome: "Canvas", valor: 45 }
+        ];
+
+        contexto.font = "16px Arial";
+        contexto.strokeStyle = "#3f3f46";
+
+        contexto.beginPath();
+        contexto.moveTo(70, 30);
+        contexto.lineTo(70, 300);
+        contexto.lineTo(760, 300);
+        contexto.stroke();
+
+        dados.forEach((item, indice) => {
+            const x = 120 + indice * 155;
+            const altura = item.valor * 2.4;
+            const y = 300 - altura;
+
+            contexto.fillStyle = "#7e07a5";
+            contexto.fillRect(x, y, 90, altura);
+
+            contexto.fillStyle = "#222";
+            contexto.fillText(item.nome, x + 12, 325);
+            contexto.fillText(item.valor + "%", x + 25, y - 10);
+        });
+    </script>
+</body>
+</html>
