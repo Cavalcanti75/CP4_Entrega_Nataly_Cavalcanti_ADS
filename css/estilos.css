@@ -1,7 +1,4 @@
-/* ==========================================================================
-   Site pessoal — Nataly Barros Cavalcanti
-   CP1: estrutura HTML semântica e CSS básico
-   ========================================================================== */
+/* Site pessoal — Nataly Barros Cavalcanti */
 
 * {
     box-sizing: border-box;
@@ -19,9 +16,7 @@ body {
     background: #f7f5f2;
 }
 
-/* --------------------------------------------------------------------------
-   Cabeçalho: marca à esquerda e menu no canto superior direito
-   -------------------------------------------------------------------------- */
+/* Cabeçalho: marca à esquerda e menu no canto superior direito */
 
 .topo {
     background: #7e07a5;
@@ -79,9 +74,7 @@ body {
     background: #bd75d5;
 }
 
-/* --------------------------------------------------------------------------
-   Estrutura interna
-   -------------------------------------------------------------------------- */
+/* Estrutura interna */
 
 main {
     width: min(1100px, 90%);
@@ -171,9 +164,7 @@ h3 {
     background: #9ca3af;
 }
 
-/* --------------------------------------------------------------------------
-   Formulário
-   -------------------------------------------------------------------------- */
+/* Formulário */
 
 form {
     display: grid;
@@ -237,9 +228,7 @@ legend {
     gap: 0.75rem;
 }
 
-/* --------------------------------------------------------------------------
-   Multimídia e gráficos
-   -------------------------------------------------------------------------- */
+/* Multimídia e gráficos */
 
 .caixa-midia {
     display: grid;
@@ -276,9 +265,7 @@ canvas {
     height: auto;
 }
 
-/* --------------------------------------------------------------------------
-   Rodapé
-   -------------------------------------------------------------------------- */
+/* Rodapé */
 
 footer {
     background: #4a0361;
@@ -292,9 +279,7 @@ footer p {
     margin: 0.25rem 0;
 }
 
-/* --------------------------------------------------------------------------
-   Ajuste simples para telas pequenas
-   -------------------------------------------------------------------------- */
+/* Ajuste simples para telas pequenas */
 
 @media (max-width: 760px) {
     .topo-conteudo {
@@ -317,9 +302,7 @@ footer p {
 }
 
 
-/* ==========================================================================
-   CP3 — JavaScript, persistência de tema e ajustes de responsividade
-   ========================================================================== */
+/* CP4 — JavaScript, persistência de tema e ajustes de responsividade */
 
 /* O tema claro permanece como padrão. */
 .botao-tema {
