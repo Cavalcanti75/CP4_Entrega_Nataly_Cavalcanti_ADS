@@ -1,5 +1,5 @@
 /*
- * CP3 — Site pessoal / Portfólio
+ * CP4 — Site pessoal / Portfólio
  * Funcionalidades:
  * 1. Alternância entre tema claro e escuro, com persistência em localStorage.
  * 2. Feedback visual após o envio válido do formulário de contato.
