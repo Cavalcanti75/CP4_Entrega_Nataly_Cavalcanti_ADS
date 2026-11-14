@@ -1,8 +1,8 @@
-# CP3 — Site Pessoal / Portfólio
+# CP4 — Site Pessoal / Portfólio
 
 **Autora:** Nataly Barros Cavalcanti  
-**Etapa:** CP3 — Git, deploy e JavaScript  
-**Prazo informado no enunciado:** 10/11/2026
+**Etapa:** CP4 — Versão final revisada, demonstrada em video e entrega final do trabalho
+**Prazo informado no enunciado:** 17/11/2026
 
 ## Sobre o projeto
 
@@ -11,7 +11,7 @@ Site pessoal/portfólio desenvolvido ao longo dos checkpoints da disciplina. O C
 ## Estrutura de pastas
 
 ```text
-CP3_Nataly_Cavalcanti_ADS/
+CP4_Nataly_Cavalcanti_ADS/
 ├── index.html
 ├── curriculo.html
 ├── formulario.html
@@ -90,10 +90,12 @@ Depois, publiquei a branch `main` pelo GitHub Pages (Settings → Pages → Depl
 - [x] Registrar histórico com commits descritivos.
 - [x] Criar e enviar a tag `cp3-entrega`.
 - [x] Publicar o site com HTTPS.
-- [x] Testar todas as páginas e links em janela anônima.
+- [x] Testar todas as páginas e links em janela anônima.    
+- [x] Gravar video demonstrando o trabalho final completo. 
 
 ## Etapas anteriores
 
 - **CP1:** estrutura HTML semântica e CSS externo.
 - **CP2:** evolução responsiva com Flexbox, Grid e media queries.
 - **CP3:** Git, deploy e JavaScript com persistência no navegador.
+- **CP4:** Versão final revisada, demonstrada em video e entrega final do trabalho.
